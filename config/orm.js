@@ -1,6 +1,6 @@
 // Import MySQL connection.
 // O.R.M. where functions are for SQL database commands
-var connection = require("../config/connection.js");
+const connection = require("../config/connection.js");
 
 function printQuestionMarks(num) {
     var arr = [];
