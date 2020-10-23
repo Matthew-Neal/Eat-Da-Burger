@@ -1,6 +1,6 @@
 // Import MySQL connection.
 // O.R.M. where functions are for SQL database commands
-const connection = require("../config/connection.js");
+const connection = require("./connection");
 
 // function printQuestionMarks(num) {
 //     var arr = [];
@@ -35,7 +35,7 @@ const orm = {
     // table = burgers, cols = columns we want to insert into, vals = array of values
     insertOne: function (tableInput, data, cb) {
         const queryString = "INSERT INTO " + tableInput + " SET ?;";
-        connection.query(queryString, data, function (err, result) {
+        connection.query(queryString, data, (err, result) => {
             if (err) {
                 throw err;
             }
@@ -46,7 +46,7 @@ const orm = {
     // Values to update, condition
     updateOne: function (tableInput, data, update, cb) {
         const queryString = "UPDATE " + tableInput + " SET ? WHERE ?;";
-        connection.query(queryString, [data, update], function (err, result) {
+        connection.query(queryString, [data, update], (err, result) => {
             if (err) {
                 throw err;
             }

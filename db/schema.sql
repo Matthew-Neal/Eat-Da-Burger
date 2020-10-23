@@ -6,14 +6,14 @@ USE burgers_db;
 
 
 -- Drops table
-DROP TABLE IF EXISTS burgers
+DROP TABLE IF EXISTS burgers;
 -- Creates/recreates new/updated table
 CREATE TABLE burgers
 (
     id INT
     AUTO_INCREMENT NOT NULL PRIMARY KEY,  
     burger_name VARCHAR
-    (200) NOT NULL, 
-    devoured BOOL DEFAULT false
+    (60) NOT NULL, 
+    devoured BOOLEAN DEFAULT false
 );
 

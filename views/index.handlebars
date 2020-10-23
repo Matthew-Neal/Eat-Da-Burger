@@ -10,25 +10,22 @@
     <ul>
         {{#each burgers}}
         {{#unless devoured}}
-        <li>
-            {{burger_name}}
 
-            <button class="change-eaten" data-id="{{id}}" data-devoured="{{devoured}}">
-                Devour Me!</button>
+        {{> burgers/burger-block devoured=false}}
 
-        </li>
+
         {{/unless}}
         {{/each}}
     </ul>
 
-    <h2>Burgers Eaten!</h2>
+    <h2>Devoured Burgers</h2>
 
     <ul>
         {{#each burgers}}
         {{#if devoured}}
-        <li>
-            {{burger_name}}
-        </li>
+
+        {{> burgers/burger-block devoured=true}}
+
         {{/if}}
         {{/each}}
     </ul>
