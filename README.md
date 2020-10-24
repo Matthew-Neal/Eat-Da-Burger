@@ -30,4 +30,4 @@ for additional questions
 
 <h2>Example</h2>
 <br>
-<img src="Eat-Da-Burger/public/assets/images/Eat-Da-Burger_SS.png"></img>
+<img src="/public/assets/images/Eat-Da-Burger_SS.png"></img>
