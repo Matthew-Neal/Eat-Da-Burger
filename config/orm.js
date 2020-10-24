@@ -2,24 +2,24 @@
 // O.R.M. where functions are for SQL database commands
 const connection = require("./connection");
 
-// function printQuestionMarks(num) {
-//     var arr = [];
+function printQuestionMarks(num) {
+    var arr = [];
 
-//     for (var i = 0; i < num; i++) {
-//         arr.push("?");
-//     }
-//     return arr.toString();
-// }
+    for (var i = 0; i < num; i++) {
+        arr.push("?");
+    }
+    return arr.toString();
+}
 
-// function objToSql(ob) {
-//     var arr = [];
+function objToSql(ob) {
+    var arr = [];
 
-//     for (var key in ob) {
-//         arr.push(key + "=" + ob[key]);
-//     }
+    for (var key in ob) {
+        arr.push(key + "=" + ob[key]);
+    }
 
-//     return arr.toString();
-// }
+    return arr.toString();
+}
 
 const orm = {
     selectAll: function (tableInput, cb) {
@@ -53,9 +53,22 @@ const orm = {
             cb(result);
         });
     },
+    delete: function (table, condition, cb) {
+        var queryString = "DELETE FROM " + table;
+        queryString += " WHERE ";
+        queryString += condition;
+
+        connection.query(queryString, function (err, result) {
+            if (err) {
+                throw err;
+            }
+
+            cb(result);
+        });
+    }
 };
 
 
 
-// Export the orm object for the model (cat.js).
+// Export the orm object for the model (burger.js).
 module.exports = orm;

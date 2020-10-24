@@ -12,14 +12,14 @@ const burger = {
     updateOne: function (data, update, cb) {
         orm.updateOne("burgers", data, update, cb);
     },
-};
 
-// delete: function (condition, cb) {
-//     orm.delete("burgers", condition, function (res) {
-//         cb(res);
-//     });
-// }
-// };
+
+    delete: function (condition, cb) {
+        orm.delete("burgers", condition, function (res) {
+            cb(res);
+        });
+    }
+};
 
 // Export the database functions for the controller (burgersController.js).
 module.exports = burger;
