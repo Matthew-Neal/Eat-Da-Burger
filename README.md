@@ -26,3 +26,8 @@ https://github.com/Matthew-Neal
  Email me at:  
 impulseimg@gmail.com  
 for additional questions
+<br>
+
+<h2>Example</h2>
+<br>
+<img src="Eat-Da-Burger/public/assets/images/Eat-Da-Burger_SS.png"></img>
